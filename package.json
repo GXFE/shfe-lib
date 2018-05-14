@@ -1,0 +1,19 @@
+{
+  "name": "shfe-lib",
+  "version": "1.0.0",
+  "description": "嵩恒前端 - 公共类库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://codeio.dftoutiao.com/RESEARCH/shfe-lib.git"
+  },
+  "keywords": [],
+  "author": "lizhigao <lizhigao1231@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.8.3"
+  }
+}
