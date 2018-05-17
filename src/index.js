@@ -1,12 +1,18 @@
 import Cookie from './Cookie'
 import Date from './Date'
 
-const ShfeLib = {
-    name: 'ShfeLib'
+const lib = {
+    name: 'lib',
+    getBrowser() {
+        return '浏览器'
+    },
+    getOs() {
+        return '系统'
+    }
 }
 
 export default {
-    ...ShfeLib,
+    ...lib,
     Cookie,
     Date
 }

@@ -4,6 +4,8 @@
   "description": "嵩恒前端 - 公共类库",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --mode=development --colors --display-chunks --progress -w",
+    "build": "webpack --mode=production --colors --display-chunks --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,5 +16,10 @@
   "author": "lizhigao <lizhigao1231@163.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
   }
 }
