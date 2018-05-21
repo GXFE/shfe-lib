@@ -7,7 +7,7 @@
         "precommit": "lint-staged",
         "dev": "webpack --mode=development --colors --display-chunks --progress -w",
         "build": "webpack --mode=production --colors --display-chunks --progress",
-        "test": "mocha --require babel-register"
+        "test": "jest"
     },
     "lint-staged": {
         "*.js": [
@@ -26,15 +26,17 @@
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-eslint": "^8.2.3",
+        "babel-jest": "^22.4.4",
         "babel-loader": "^7.1.4",
         "babel-preset-env": "^1.7.0",
         "babel-register": "^6.26.0",
         "eslint": "^4.19.1",
         "eslint-loader": "^2.0.0",
         "husky": "^0.14.3",
+        "jest": "^22.4.4",
         "lint-staged": "^7.1.1",
-        "mocha": "^5.2.0",
         "prettier": "^1.12.1",
+        "regenerator-runtime": "^0.11.1",
         "webpack": "^4.8.3",
         "webpack-cli": "^2.1.3"
     }
