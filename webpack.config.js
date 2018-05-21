@@ -11,6 +11,7 @@ const config = {
     filename: outputFile,
     library: libName,
     libraryTarget: 'umd',
+    libraryExport: 'default',
     umdNamedDefine: true
   },
   module: {

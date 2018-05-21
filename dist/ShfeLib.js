@@ -1,270 +1,145 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-  if (typeof exports === 'object' && typeof module === 'object')
-    module.exports = factory();
-  else if (typeof define === 'function' && define.amd)
-    define('ShfeLib', [], factory);
-  else if (typeof exports === 'object') exports['ShfeLib'] = factory();
-  else root['ShfeLib'] = factory();
+!(function(e, t) {
+  'object' == typeof exports && 'object' == typeof module
+    ? (module.exports = t())
+    : 'function' == typeof define && define.amd
+      ? define('ShfeLib', [], t)
+      : 'object' == typeof exports
+        ? (exports.ShfeLib = t())
+        : (e.ShfeLib = t());
 })(window, function() {
-  return /******/ (function(modules) {
-    // webpackBootstrap
-    /******/ // The module cache
-    /******/ var installedModules = {}; // The require function
-    /******/
-    /******/ /******/ function __webpack_require__(moduleId) {
-      /******/
-      /******/ // Check if module is in cache
-      /******/ if (installedModules[moduleId]) {
-        /******/ return installedModules[moduleId].exports;
-        /******/
-      } // Create a new module (and put it into the cache)
-      /******/ /******/ var module = (installedModules[moduleId] = {
-        /******/ i: moduleId,
-        /******/ l: false,
-        /******/ exports: {}
-        /******/
-      }); // Execute the module function
-      /******/
-      /******/ /******/ modules[moduleId].call(
-        module.exports,
-        module,
-        module.exports,
-        __webpack_require__
-      ); // Flag the module as loaded
-      /******/
-      /******/ /******/ module.l = true; // Return the exports of the module
-      /******/
-      /******/ /******/ return module.exports;
-      /******/
-    } // expose the modules object (__webpack_modules__)
-    /******/
-    /******/
-    /******/ /******/ __webpack_require__.m = modules; // expose the module cache
-    /******/
-    /******/ /******/ __webpack_require__.c = installedModules; // define getter function for harmony exports
-    /******/
-    /******/ /******/ __webpack_require__.d = function(exports, name, getter) {
-      /******/ if (!__webpack_require__.o(exports, name)) {
-        /******/ Object.defineProperty(exports, name, {
-          /******/ configurable: false,
-          /******/ enumerable: true,
-          /******/ get: getter
-          /******/
-        });
-        /******/
-      }
-      /******/
-    }; // define __esModule on exports
-    /******/
-    /******/ /******/ __webpack_require__.r = function(exports) {
-      /******/ Object.defineProperty(exports, '__esModule', { value: true });
-      /******/
-    }; // getDefaultExport function for compatibility with non-harmony modules
-    /******/
-    /******/ /******/ __webpack_require__.n = function(module) {
-      /******/ var getter =
-        module && module.__esModule
-          ? /******/ function getDefault() {
-              return module['default'];
-            }
-          : /******/ function getModuleExports() {
-              return module;
-            };
-      /******/ __webpack_require__.d(getter, 'a', getter);
-      /******/ return getter;
-      /******/
-    }; // Object.prototype.hasOwnProperty.call
-    /******/
-    /******/ /******/ __webpack_require__.o = function(object, property) {
-      return Object.prototype.hasOwnProperty.call(object, property);
-    }; // __webpack_public_path__
-    /******/
-    /******/ /******/ __webpack_require__.p = ''; // Load entry module and return exports
-    /******/
-    /******/
-    /******/ /******/ return __webpack_require__(
-      (__webpack_require__.s = './src/index.js')
-    );
-    /******/
-  })(
-    /************************************************************************/
-    /******/ {
-      /***/ './src/Cookie.js':
-        /*!***********************!*\
-  !*** ./src/Cookie.js ***!
-  \***********************/
-        /*! exports provided: default */
-        /***/ function(module, __webpack_exports__, __webpack_require__) {
-          'use strict';
-          __webpack_require__.r(__webpack_exports__);
-          var _createClass = (function() {
-            function defineProperties(target, props) {
-              for (var i = 0; i < props.length; i++) {
-                var descriptor = props[i];
-                descriptor.enumerable = descriptor.enumerable || false;
-                descriptor.configurable = true;
-                if ('value' in descriptor) descriptor.writable = true;
-                Object.defineProperty(target, descriptor.key, descriptor);
+  return (function(e) {
+    var t = {};
+    function n(r) {
+      if (t[r]) return t[r].exports;
+      var o = (t[r] = { i: r, l: !1, exports: {} });
+      return e[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports;
+    }
+    return (
+      (n.m = e),
+      (n.c = t),
+      (n.d = function(e, t, r) {
+        n.o(e, t) ||
+          Object.defineProperty(e, t, {
+            configurable: !1,
+            enumerable: !0,
+            get: r
+          });
+      }),
+      (n.r = function(e) {
+        Object.defineProperty(e, '__esModule', { value: !0 });
+      }),
+      (n.n = function(e) {
+        var t =
+          e && e.__esModule
+            ? function() {
+                return e.default;
               }
-            }
-            return function(Constructor, protoProps, staticProps) {
-              if (protoProps)
-                defineProperties(Constructor.prototype, protoProps);
-              if (staticProps) defineProperties(Constructor, staticProps);
-              return Constructor;
-            };
-          })();
-
-          function _classCallCheck(instance, Constructor) {
-            if (!(instance instanceof Constructor)) {
-              throw new TypeError('Cannot call a class as a function');
+            : function() {
+                return e;
+              };
+        return n.d(t, 'a', t), t;
+      }),
+      (n.o = function(e, t) {
+        return Object.prototype.hasOwnProperty.call(e, t);
+      }),
+      (n.p = ''),
+      n((n.s = 0))
+    );
+  })([
+    function(e, t, n) {
+      'use strict';
+      n.r(t);
+      var r = {
+          name: 'Utils',
+          getUid: function() {
+            return (
+              +new Date() +
+              Math.random()
+                .toString(10)
+                .substring(2, 6)
+            );
+          },
+          getRandom: function(e, t) {
+            return Math.floor(Math.random() * (t - e) + e);
+          }
+        },
+        o = (function() {
+          function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+              var r = t[n];
+              (r.enumerable = r.enumerable || !1),
+                (r.configurable = !0),
+                'value' in r && (r.writable = !0),
+                Object.defineProperty(e, r.key, r);
             }
           }
-
-          var Cookie = (function() {
-            function Cookie() {
-              _classCallCheck(this, Cookie);
-            }
-
-            _createClass(Cookie, [
+          return function(t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
+          };
+        })();
+      var u = (function() {
+          function e() {
+            !(function(e, t) {
+              if (!(e instanceof t))
+                throw new TypeError('Cannot call a class as a function');
+            })(this, e);
+          }
+          return (
+            o(e, [
               {
                 key: 'set',
-
-                /**
-                 * 设置cookie
-                 * @param name 名称
-                 * @param value 值
-                 * @param expires 有效时间（单位：小时）（可选） 默认：24h
-                 */
-                value: function set(name, value, expires) {
-                  var expTimes = expires
-                    ? Number(expires) * 60 * 60 * 1000
-                    : 24 * 60 * 60 * 1000; // 毫秒
-                  var expDate = new Date();
-                  expDate.setTime(expDate.getTime() + expTimes);
-                  var expString = expires
-                    ? '; expires=' + expDate.toUTCString()
-                    : '';
-                  var pathString = '; path=/';
-                  document.cookie =
-                    name + '=' + encodeURI(value) + expString + pathString;
+                value: function(e, t, n) {
+                  var r = n ? 60 * Number(n) * 60 * 1e3 : 864e5,
+                    o = new Date();
+                  o.setTime(o.getTime() + r);
+                  var u = n ? '; expires=' + o.toUTCString() : '';
+                  document.cookie = e + '=' + encodeURI(t) + u + '; path=/';
                 }
-                /**
-                 * 读cookie
-                 * @param name
-                 */
               },
               {
                 key: 'get',
-                value: function get(name) {
-                  var cookieStr = '; ' + document.cookie + '; ';
-                  var index = cookieStr.indexOf('; ' + name + '=');
-                  if (index !== -1) {
-                    var s = cookieStr.substring(
-                      index + name.length + 3,
-                      cookieStr.length
-                    );
-                    return decodeURI(s.substring(0, s.indexOf('; ')));
-                  } else {
-                    return null;
+                value: function(e) {
+                  var t = '; ' + document.cookie + '; ',
+                    n = t.indexOf('; ' + e + '=');
+                  if (-1 !== n) {
+                    var r = t.substring(n + e.length + 3, t.length);
+                    return decodeURI(r.substring(0, r.indexOf('; ')));
                   }
+                  return null;
                 }
-                /**
-                 * 删除cookie
-                 * @param name
-                 */
               },
               {
                 key: 'del',
-                value: function del(name) {
-                  var exp = new Date(new Date().getTime() - 1);
-                  var s = this.read(name);
-                  if (s !== null) {
-                    document.cookie =
-                      name +
+                value: function(e) {
+                  var t = new Date(new Date().getTime() - 1),
+                    n = this.read(e);
+                  null !== n &&
+                    (document.cookie =
+                      e +
                       '=' +
-                      s +
+                      n +
                       '; expires=' +
-                      exp.toUTCString() +
-                      '; path=/';
-                  }
+                      t.toUTCString() +
+                      '; path=/');
                 }
               }
-            ]);
-
-            return Cookie;
-          })();
-
-          /* harmony default export */ __webpack_exports__['default'] = Cookie;
-
-          /***/
-        },
-
-      /***/ './src/Date.js':
-        /*!*********************!*\
-  !*** ./src/Date.js ***!
-  \*********************/
-        /*! exports provided: default */
-        /***/ function(module, __webpack_exports__, __webpack_require__) {
-          'use strict';
-          __webpack_require__.r(__webpack_exports__);
-          /* harmony default export */ __webpack_exports__['default'] = {
-            name: 'Date'
-          };
-
-          /***/
-        },
-
-      /***/ './src/index.js':
-        /*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-        /*! exports provided: default */
-        /***/ function(module, __webpack_exports__, __webpack_require__) {
-          'use strict';
-          __webpack_require__.r(__webpack_exports__);
-          /* harmony import */ var _Cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-            /*! ./Cookie */ './src/Cookie.js'
+            ]),
+            e
           );
-          /* harmony import */ var _Date__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-            /*! ./Date */ './src/Date.js'
-          );
-          var _extends =
-            Object.assign ||
-            function(target) {
-              for (var i = 1; i < arguments.length; i++) {
-                var source = arguments[i];
-                for (var key in source) {
-                  if (Object.prototype.hasOwnProperty.call(source, key)) {
-                    target[key] = source[key];
-                  }
-                }
-              }
-              return target;
-            };
-
-          var lib = {
-            name: 'lib',
-            getBrowser: function getBrowser() {
-              return '浏览器';
-            },
-            getOs: function getOs() {
-              return '系统';
-            }
-          };
-
-          /* harmony default export */ __webpack_exports__[
-            'default'
-          ] = _extends({}, lib, {
-            Cookie: _Cookie__WEBPACK_IMPORTED_MODULE_0__['default'],
-            Date: _Date__WEBPACK_IMPORTED_MODULE_1__['default']
-          });
-
-          /***/
-        }
-
-      /******/
+        })(),
+        i = {
+          name: 'Url',
+          parseQueryString: function() {
+            return {};
+          },
+          getQueryString: function(e) {
+            var t = new RegExp('(^|&)' + e + '=([^&]*)(&|$)', 'i'),
+              n = window.location.search.substr(1).match(t);
+            return null != n ? decodeURI(n[2]) : null;
+          }
+        };
+      t.default = { Util: r, Cookie: u, Date: { name: 'Date' }, Url: i };
     }
-  );
+  ]).default;
 });
 //# sourceMappingURL=ShfeLib.js.map
