@@ -1,18 +1,9 @@
-import Cookie from './Cookie'
-import Date from './Date'
-
-const lib = {
-    name: 'lib',
-    getBrowser() {
-        return '浏览器'
-    },
-    getOs() {
-        return '系统'
-    }
-}
+import Util from './Util';
+import Cookie from './Cookie';
+import Date from './Date';
 
 export default {
-    ...lib,
-    Cookie,
-    Date
-}
+  Util,
+  Cookie,
+  Date
+};

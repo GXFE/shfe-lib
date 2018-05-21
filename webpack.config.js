@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 const libName = 'ShfeLib';
 const outputFile = libName + '.js';
@@ -14,16 +14,19 @@ const config = {
     umdNamedDefine: true
   },
   module: {
-    rules: [{
-      enforce: "pre",
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: "eslint-loader"
-    }, {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: "babel-loader"
-    }]
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
   }
 };
 
