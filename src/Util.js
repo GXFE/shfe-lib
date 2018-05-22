@@ -1,5 +1,4 @@
 export default {
-  name: 'Utils',
   /**
    * 生成唯一id（当前时间戳13位+4位数随机数）
    * @returns {string} 17位数字组成的字符串
@@ -20,5 +19,29 @@ export default {
    */
   getRandom: function(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
+  },
+  isNumber: function(s) {
+    return !isNaN(s);
+  },
+  isString: function(s) {
+    return typeof s === 'string';
+  },
+  isBoolean: function(s) {
+    return typeof s === 'boolean';
+  },
+  isFunction: function(s) {
+    return typeof s === 'function';
+  },
+  isNull: function(s) {
+    return s === null;
+  },
+  isUndefined: function(s) {
+    return typeof s === 'undefined';
+  },
+  isEmpty: function(s) {
+    return /^\s*$/.test(s);
+  },
+  isArray: function(s) {
+    return s instanceof Array;
   }
 };

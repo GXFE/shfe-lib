@@ -5,6 +5,7 @@ module.exports = {
     node: true
   },
   parser: 'babel-eslint',
+  // extends: ["prettier"],
   extends: 'eslint:recommended',
   parserOptions: {
     sourceType: 'module'
@@ -15,7 +16,7 @@ module.exports = {
     'no-console': [
       'error',
       {
-        allow: ['warn']
+        allow: ['warn', 'error']
       }
     ],
     quotes: ['error', 'single'],

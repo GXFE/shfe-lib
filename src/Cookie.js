@@ -1,4 +1,4 @@
-export default class Cookie {
+export default {
   /**
    * 设置cookie
    * @param name 名称
@@ -14,7 +14,7 @@ export default class Cookie {
     const expString = expires ? '; expires=' + expDate.toUTCString() : '';
     const pathString = '; path=/';
     document.cookie = name + '=' + encodeURI(value) + expString + pathString;
-  }
+  },
   /**
    * 读cookie
    * @param name
@@ -28,7 +28,7 @@ export default class Cookie {
     } else {
       return null;
     }
-  }
+  },
   /**
    * 删除cookie
    * @param name
@@ -41,4 +41,4 @@ export default class Cookie {
         name + '=' + s + '; expires=' + exp.toUTCString() + '; path=/';
     }
   }
-}
+};
